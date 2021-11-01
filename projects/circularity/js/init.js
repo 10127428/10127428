@@ -80,6 +80,18 @@ var init = function (window) {
             }
             
             // TODO 7 : YOUR CODE STARTS HERE //////////////////////
+            if ( circle.x < 0 ) {
+                circle.x = canvis.width;
+            }
+
+            if ( circle.y < 0 ) {
+                circle.y = canvis.width;
+            }
+
+            if ( circle.y > canvis.width ) {
+                circle.y = 0;
+            }
+
             
 
 
