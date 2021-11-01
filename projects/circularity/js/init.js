@@ -22,7 +22,7 @@ var init = function (window) {
         // TODO 1 : Declare and initialize our variables
         var circle;
         var circles = [];
-
+        
         // TODO 2 : Create a function that draws a circle 
         function drawCircle(){
             circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);
@@ -77,6 +77,7 @@ var init = function (window) {
             // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
             if ( circle.x > canvas.width ) {
                 circle.x = 0;
+                
             }
             
             // TODO 7 : YOUR CODE STARTS HERE //////////////////////
@@ -85,12 +86,13 @@ var init = function (window) {
             }
 
             if ( circle.y < 0 ) {
-                circle.y = canvas.width;
+                circle.y = canvas.height;
             }
 
-            if ( circle.y > canvas.width ) {
+            if ( circle.y > canvas.height) {
                 circle.y = 0;
             }
+        
 
             
 
