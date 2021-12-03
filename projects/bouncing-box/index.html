@@ -19,7 +19,8 @@
 			display: block;
 			position: absolute;
 			top: 400px;
-			left: 669px;  /* <--- Change me! */
+			 left: 669px;  /*<--- Change me! */
+			
 		}
 
 		@keyframes bruh { 
@@ -34,7 +35,7 @@
 			
 		}
 			body {
-		 	background-image: url("https://c.tenor.com/YaHGMAb11DMAAAAM/polish-toilet.gif")
+		 	background-image: url("https://c.tenor.com/IvyuPtEfzhoAAAAC/matrix.gif")
  			
 
 		}
@@ -85,7 +86,7 @@
 			var positionX = 0;
 			var points = 0;
 			var speed = 10;
-			var positionY = 300; 
+			var positionY = 0;
 			var speedY = 10;
 			var boardHeight = jQuery(window).height();
 			
@@ -99,28 +100,25 @@
 			*/
 			function update() {
 				positionX = positionX + speed
+				positionY = positionY + speedY
 				moveBoxTo(positionX, positionY);
 
 				if (positionX > boardWidth) {
-					speed = -speed;
+					speed = speed * -1;
 					
 
 				}
 
-				if (positionY > boardWidth) {
-					speed = -speed;
+				if (positionY > boardHeight) {
+					speedY = -speedY;
 				}
 
 
 				if (positionX < 0) {
-					speed *= -1;
-
-				
-				
-				}
+					speed = speed * -1;				}
 
 				if (positionY < 0) {
-					speed *= -1;
+					speedY = -speedY
 				}
 					
 					
